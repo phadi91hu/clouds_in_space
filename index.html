@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asztrofotós Portfólió</title>
+    <style>
+        /* Alapvető sötét téma és letisztult betűtípus */
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Fejléc stílusa */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #0a0a0a;
+            border-bottom: 1px solid #333;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        header p {
+            color: #888;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        /* A galéria rácsszerkezete (CSS Grid) */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* A képek kártyái */
+        .photo-card {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Maga a kép */
+        .photo-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #333;
+        }
+
+        /* A kép alatti leírás (metaadatok) */
+        .meta-data {
+            padding: 15px;
+        }
+
+        .meta-data h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .meta-data p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .highlight {
+            color: #4da6ff; /* Kék kiemelés a technikai részleteknek */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mélyég és Csillagok</h1>
+        <p>A 200/800 Newton és ami mögötte van</p>
+    </header>
+
+    <div class="gallery">
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/600x400/000000/ffffff?text=Orion+Nebula" alt="Orion-köd">
+            <div class="meta-data">
+                <h2>Orion-köd (M42)</h2>
+                <p>Távcső: <span class="highlight">200/800 Newton f/4</span></p>
+                <p>Kamera: <span class="highlight">Canon 250D (modded)</span></p>
+                <p>Expozíció: <span class="highlight">45 x 180s</span></p>
+            </div>
+        </div>
+
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/600x400/000000/ffffff?text=Cigar+Galaxy" alt="Szivar-galaxis">
+            <div class="meta-data">
+                <h2>Szivar-galaxis (M82)</h2>
+                <p>Távcső: <span class="highlight">200/800 Newton f/4</span></p>
+                <p>Kamera: <span class="highlight">ZWO ASI 585MC Pro</span></p>
+                <p>Expozíció: <span class="highlight">120 x 60s</span></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
